@@ -6,97 +6,101 @@
 /* Import your fonts */
 @import url("https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;500;600&family=Space+Grotesk:wght@500;600&display=swap");
 
-/* GLOBAL DARK THEME */
+/* GLOBAL EARTH-TONE DARK THEME */
 body {
-  background-color: #000000;
-  color: #f3f3f3;
+  background-color: #0b0b0b; /* charcoal brown-black */
+  color: #e7e2da; /* warm light sand, readable on dark */
   font-family: "EB Garamond", Garamond, Georgia, serif;
-  line-height: 1.7;
-  font-size: 1.07rem;
+  line-height: 1.72;
+  font-size: 1.08rem;
   margin: 0;
   padding: 0;
 }
 
-/* HEADINGS */
+/* HEADINGS — modern but soft */
 h1, h2, h3, h4, h5, h6,
 .site-title, .post-title {
   font-family: "Space Grotesk", sans-serif;
-  color: #ffffff;
+  color: #f4f1ec; /* warm white */
   font-weight: 600;
-  letter-spacing: 0.5px;
+  letter-spacing: 0.6px;
 }
 
-/* Content width for readability */
-.wrapper {
-  max-width: 780px;
-  padding-left: 1.4rem;
-  padding-right: 1.4rem;
-}
-
-/* LINKS */
+/* ACCENT COLOR (olive green) */
 a {
-  color: #6e56cf; /* muted academic purple */
+  color: #8ba96b; /* soft olive green */
   text-decoration: none;
 }
 
 a:hover {
   text-decoration: underline;
+  color: #a2c07f; /* slightly brighter olive on hover */
 }
 
-/* PARAGRAPHS */
+/* CONTENT WIDTH FOR READABILITY */
+.wrapper {
+  max-width: 760px;
+  padding-left: 1.3rem;
+  padding-right: 1.3rem;
+}
+
+/* PARAGRAPH SPACING */
 .post-content p {
-  margin-bottom: 1rem;
+  margin-bottom: 1.05rem;
 }
 
-/* BLOCKQUOTES */
+/* BLOCKQUOTES — coffee + olive tone */
 blockquote {
-  border-left: 3px solid #6e56cf;
+  border-left: 3px solid #7a5a3a; /* coffee brown */
   padding-left: 1rem;
   margin-left: 0;
-  color: #c7c7c7;
+  color: #d8d2c9; /* subtle stone grey */
   font-style: italic;
-  background: rgba(110, 86, 207, 0.08);
+  background: rgba(123, 90, 58, 0.15); /* soft coffee glow */
+  border-radius: 4px;
 }
 
 /* NAVBAR */
 .site-header {
-  border-bottom: 1px solid #1f1f1f;
-  background-color: #000000;
+  border-bottom: 1px solid #1d1d1d;
+  background-color: #0b0b0b;
 }
 
 .site-title a {
-  color: #ffffff !important;
+  color: #f4f1ec !important;
 }
 
 /* FOOTER */
 .site-footer {
-  border-top: 1px solid #1f1f1f;
-  color: #888888;
+  border-top: 1px solid #1d1d1d;
+  color: #9a948b;
   font-size: 0.85rem;
   padding-top: 1rem;
 }
 
-/* LIST STYLING */
+/* LISTS */
 ul, ol {
-  margin-left: 1.2rem;
+  margin-left: 1.3rem;
 }
 
-/* INLINE CODE */
+/* INLINE CODE BLOCKS */
 code {
-  background: #1f1f1f;
-  padding: 0.15em 0.3em;
-  border-radius: 3px;
-  font-size: 0.92rem;
+  background: #1d1d1d;
+  color: #e9e3db;
+  padding: 0.2em 0.35em;
+  border-radius: 4px;
+  font-size: 0.93rem;
 }
 
-/* Images */
+/* IMAGES */
 img {
   max-width: 100%;
   border-radius: 6px;
   margin: 1rem 0;
+  box-shadow: 0 0 18px rgba(0, 0, 0, 0.5);
 }
 
-/* Mobile */
+/* MOBILE */
 @media (max-width: 600px) {
   .wrapper {
     padding-left: 1rem;
