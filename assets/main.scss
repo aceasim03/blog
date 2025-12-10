@@ -3,41 +3,41 @@
 
 @import "minima";
 
-/* Import your fonts */
-@import url("https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;500;600&family=Space+Grotesk:wght@500;600&display=swap");
+/* Import fonts */
+@import url("https://fonts.googleapis.com/css2?family=Source+Serif+Pro:wght@400;600&family=Inter:wght@500;600&display=swap");
 
-/* GLOBAL EARTH-TONE DARK THEME */
+/* GLOBAL DARK EARTH-TONE THEME */
 body {
-  background-color: #0b0b0b; /* charcoal brown-black */
-  color: #e7e2da; /* warm light sand, readable on dark */
-  font-family: "EB Garamond", Garamond, Georgia, serif;
-  line-height: 1.72;
-  font-size: 1.08rem;
+  background-color: #0b0b0b; 
+  color: #e7e2da; 
+  font-family: "Source Serif Pro", Georgia, serif;
+  line-height: 1.7;
+  font-size: 1.1rem;
   margin: 0;
   padding: 0;
 }
 
-/* HEADINGS — modern but soft */
+/* HEADINGS */
 h1, h2, h3, h4, h5, h6,
 .site-title, .post-title {
-  font-family: "Space Grotesk", sans-serif;
-  color: #f4f1ec; /* warm white */
+  font-family: "Inter", sans-serif;
+  color: #f4f1ec;
   font-weight: 600;
-  letter-spacing: 0.6px;
+  letter-spacing: 0.3px;
 }
 
-/* ACCENT COLOR (olive green) */
+/* LINKS = Olive green */
 a {
-  color: #8ba96b; /* soft olive green */
+  color: #8ba96b;
   text-decoration: none;
 }
 
 a:hover {
   text-decoration: underline;
-  color: #a2c07f; /* slightly brighter olive on hover */
+  color: #a9c988;
 }
 
-/* CONTENT WIDTH FOR READABILITY */
+/* CONTENT WIDTH */
 .wrapper {
   max-width: 760px;
   padding-left: 1.3rem;
@@ -49,14 +49,14 @@ a:hover {
   margin-bottom: 1.05rem;
 }
 
-/* BLOCKQUOTES — coffee + olive tone */
+/* BLOCKQUOTES — coffee accent */
 blockquote {
-  border-left: 3px solid #7a5a3a; /* coffee brown */
+  border-left: 3px solid #7a5a3a;
   padding-left: 1rem;
   margin-left: 0;
-  color: #d8d2c9; /* subtle stone grey */
+  color: #d8d2c9;
   font-style: italic;
-  background: rgba(123, 90, 58, 0.15); /* soft coffee glow */
+  background: rgba(123, 90, 58, 0.15);
   border-radius: 4px;
 }
 
@@ -83,7 +83,7 @@ ul, ol {
   margin-left: 1.3rem;
 }
 
-/* INLINE CODE BLOCKS */
+/* CODE BLOCK */
 code {
   background: #1d1d1d;
   color: #e9e3db;
