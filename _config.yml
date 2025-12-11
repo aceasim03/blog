@@ -10,3 +10,4 @@ timezone: "Beijing Right Now"
 header_pages:
   - index.md
   - about.md
+  - topics.md
