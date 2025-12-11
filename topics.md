@@ -25,7 +25,7 @@ Click on a topic to jump to all posts that use that tag.
     {% for post in tag[1] %}
       <li>
         <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
-        <span>— {{ post.date | date: "%Y-%m-%d" }}</span>
+        <span> — {{ post.date | date: "%Y-%m-%d" }}</span>
       </li>
     {% endfor %}
   </ul>
