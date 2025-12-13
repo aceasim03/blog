@@ -38,9 +38,12 @@ How does this moment complicate “privacy,” “consent,” or “community”
 
 ---
 
+---
+
 {% if page.tags %}
-**Tags:**  
-{% for tag in page.tags %}
-[#{{ tag }}]({{ '/topics/#' | append: tag | slugify | relative_url }}){% unless forloop.last %}, {% endunless %}
-{% endfor %}
+<div class="tag-row">
+  {% for tag in page.tags %}
+    <a class="tag-chip" href="{{ '/topics/' | relative_url }}#{{ tag | slugify }}">#{{ tag }}</a>
+  {% endfor %}
+</div>
 {% endif %}
