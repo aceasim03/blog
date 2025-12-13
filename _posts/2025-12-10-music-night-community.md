@@ -112,3 +112,14 @@ Music Night is a reminder that academic life is not only about producing ideas â
 - Ellen Dissanayake, *What Is Art For?* (1988).  
 
 (You can update or add citations as needed.)
+
+---
+
+{% if page.tags %}
+<div class="tag-row">
+  {% for tag in page.tags %}
+    <a class="tag-chip" href="{{ '/topics/' | relative_url }}#{{ tag | slugify }}">#{{ tag }}</a>
+  {% endfor %}
+</div>
+{% endif %}
+
