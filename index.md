@@ -3,6 +3,12 @@ layout: home
 title: Home
 ---
 
+<div class="home-menu">
+  <a class="home-chip" href="{{ '/about/' | relative_url }}">About</a>
+  <a class="home-chip" href="{{ '/topics/' | relative_url }}">Topics</a>
+</div>
+
+
 Welcome 👋  
 This is my in-progress notebook on **AI ethics, art, and travel** — the three threads that shape how I think and move through the world.
 
