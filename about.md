@@ -57,3 +57,16 @@ If you’d like to reach out, collaborate, or chat:
 ---
 
 Thanks for visiting — I hope you find something here that resonates.
+
+
+**Disclaimer**
+
+This blog is a personal project used for academic practice, reflection, and public scholarship. 
+The views expressed here are my own and do not represent those of any affiliated institutions or organizations.
+
+Unless otherwise stated, all writing on this site is original. 
+Short excerpts from copyrighted works may be quoted for purposes of commentary, critique, research, and education, with appropriate attribution.
+
+All images are either my own, used with permission, or used in accordance with applicable fair use or open-license principles. 
+If you believe any material on this site has been used in error, please contact me and I will address it promptly.
+
