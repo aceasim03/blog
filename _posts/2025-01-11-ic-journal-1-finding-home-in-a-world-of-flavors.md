@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "YOUR TITLE HERE"
+title: "Intercultural Journal #1 | Finding Home in a World of Flavors"
 date: 2025-01-11
 tags: [Travel, Reflection, Culture]
 ---
