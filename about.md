@@ -19,6 +19,9 @@ My background spans:
 
 This blog is where all of those threads meet.
 
+![Ace in Wuxi]({{ 'assets/images/WechatIMG187.jpg' | relative_url }})
+
+
 ---
 
 ## What This Blog Is
