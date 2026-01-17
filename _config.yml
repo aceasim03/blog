@@ -1,0 +1,12 @@
+title: "Fragments on AI, Ethics & Elsewhere"
+description: "A grad student's notebook on AI ethics, culture, and travel."
+theme: minima
+
+author: "Ace Asim"
+timezone: "Asia/Shanghai"
+
+header_pages:
+  - index.md
+  - about.md
+  - topics.md
+  - all-posts.md
