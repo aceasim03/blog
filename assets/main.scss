@@ -381,3 +381,166 @@ figcaption {
     grid-template-columns: 1fr;
   }
 }
+
+
+
+/* ===== Front page editorial styling ===== */
+.front-dek {
+  margin: 1.1rem 0 0.9rem 0;
+  font-size: 1.1rem;
+  color: var(--muted);
+}
+
+.front-rule {
+  height: 1px;
+  background: var(--line);
+  margin: 0.9rem 0 1.4rem 0;
+  position: relative;
+}
+
+.front-rule::after {
+  content: "";
+  display: block;
+  height: 2px;
+  width: 120px;
+  background: var(--china-red);
+  opacity: 0.35;
+  margin-top: -1px;
+}
+
+.front-section {
+  margin: 1.2rem 0 1.8rem 0;
+}
+
+.front-kicker {
+  font-family: "Inter", system-ui, sans-serif;
+  font-size: 0.78rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin-bottom: 0.7rem;
+}
+
+/* Featured card (already added earlier, keeping consistent) */
+.featured-card {
+  display: grid;
+  grid-template-columns: 1.1fr 1.4fr;
+  gap: 1.25rem;
+  padding: 0.9rem 0 1.4rem 0;
+  border-bottom: 1px solid var(--line);
+}
+
+.featured-img {
+  width: 100%;
+  border-radius: 10px;
+  display: block;
+}
+
+.featured-title a {
+  color: var(--ink);
+  text-decoration: none;
+}
+
+.featured-title a:hover {
+  text-decoration: underline;
+  text-decoration-color: var(--china-red);
+}
+
+.featured-date {
+  font-family: "Inter", system-ui, sans-serif;
+  font-size: 0.92rem;
+  color: var(--muted);
+  margin: 0.45rem 0 0.85rem 0;
+}
+
+.featured-link {
+  font-family: "Inter", system-ui, sans-serif;
+  font-weight: 650;
+  text-decoration: none;
+}
+
+.featured-link:hover {
+  text-decoration: underline;
+  text-decoration-color: var(--china-red);
+}
+
+/* Latest list */
+.front-list {
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+  border-top: 1px solid var(--line);
+}
+
+.front-item {
+  padding: 1rem 0 1.1rem 0;
+  border-bottom: 1px solid rgba(229, 231, 235, 0.6);
+}
+
+.front-item-date {
+  font-family: "Inter", system-ui, sans-serif;
+  color: var(--muted);
+  font-size: 0.88rem;
+}
+
+.front-item-title {
+  display: inline-block;
+  margin-top: 0.25rem;
+  font-family: "Inter", system-ui, sans-serif;
+  font-weight: 750;
+  color: var(--ink);
+  text-decoration: none;
+}
+
+.front-item-title:hover {
+  text-decoration: underline;
+  text-decoration-color: var(--china-red);
+}
+
+.front-item-excerpt {
+  margin-top: 0.4rem;
+  color: var(--muted);
+}
+
+.front-more {
+  margin-top: 0.9rem;
+  font-family: "Inter", system-ui, sans-serif;
+  font-weight: 600;
+}
+
+/* Archive page */
+.archive-list {
+  list-style: none;
+  padding-left: 0;
+  margin-left: 0;
+}
+
+.archive-item {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 0.65rem 0;
+  border-bottom: 1px solid rgba(229, 231, 235, 0.6);
+}
+
+.archive-title {
+  text-decoration: none;
+}
+
+.archive-title:hover {
+  text-decoration: underline;
+  text-decoration-color: var(--china-red);
+}
+
+.archive-date {
+  font-family: "Inter", system-ui, sans-serif;
+  color: var(--muted);
+  font-size: 0.92rem;
+  white-space: nowrap;
+}
+
+@media (max-width: 700px) {
+  .featured-card {
+    grid-template-columns: 1fr;
+  }
+}
