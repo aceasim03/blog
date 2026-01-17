@@ -55,4 +55,3 @@ I’m going to go eat some burgers now.
   {% endfor %}
 </div>
 {% endif %}
-<img width="468" height="366" alt="image" src="https://github.com/user-attachments/assets/58742131-ec26-4595-83a4-60d123bc254b" />
