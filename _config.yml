@@ -12,5 +12,3 @@ baseurl: "/blog"
   - index.md
   - about.md
   - topics.md
-  - all-posts.md
-
