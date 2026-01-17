@@ -43,7 +43,7 @@ I write here to explore, to document, and to stay honest about the human side of
 If you’d like to reach out, collaborate, or chat:
 
 - **Email:** aceasim03@gmail.com
-- **LinkedIn:** [Your LinkedIn](https://www.linkedin.com/in/aasim03/)   
+- **LinkedIn:** [My LinkedIn](https://www.linkedin.com/in/aasim03/)   
 
 ---
 
