@@ -5,10 +5,7 @@ date: 2026-01-16
 tags: [Art, Travel, Reflection]
 ---
 
-<figure>
-  <img src="{{ 'assets/images/C6FF8F1C-246A-475C-98FE-A0A35ABC3243_1_102_o.jpeg' | relative_url }}" alt="Picture of my Camera">
-  <figcaption>My Father’s, I mean, my Lumix Camera – taken at a café in Suzhou (3/2024).</figcaption>
-</figure>
+![Picture of my Camera]({{ ' assets/images/C6FF8F1C-246A-475C-98FE-A0A35ABC3243_1_102_o.jpeg' | relative_url }})
 
 Today is my birthday. That makes it time for a reflection. In my reflection, I went through some old photos from years past and wanted to share the increasingly emotional attachment I have with my father’s, and now my, camera – the Lumix Panasonic GF2. 
 
