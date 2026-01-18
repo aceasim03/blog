@@ -2,7 +2,7 @@
 layout: post
 title: "Intercultural Journal #7 | Reflection"
 date: 2025-02-28
-tags: [Travel, Reflection, Culture]
+tags: [Reflection, Culture, Travel]
 ---
 
 I think that because this is the last journal for the class, I should reflect on my growth over the past seven weeks.
