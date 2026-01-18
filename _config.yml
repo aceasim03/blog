@@ -7,6 +7,6 @@ timezone: "Asia/Shanghai"
 
 header_pages:
   - index.md
-  - about.md
   - topics.md
   - all-posts.md
+  - about.md
