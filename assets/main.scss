@@ -10,14 +10,14 @@
    Theme tokens
    ========= */
 :root {
-  --paper: #fbfaf7;          /* softer, more “magazine paper” than #f6f5f2 */
-  --ink: #0f172a;            /* deep ink */
-  --body: #1f2933;           /* soft charcoal */
-  --muted: #52606d;          /* muted text */
-  --line: #e5e7eb;           /* hairline divider */
-  --link: #334155;           /* slate */
-  --link-hover: #0f172a;     /* ink */
-  --china-red: #b91c1c;      /* restrained red */
+  --paper: #fbfaf7;
+  --ink: #0f172a;
+  --body: #1f2933;
+  --muted: #52606d;
+  --line: #e5e7eb;
+  --link: #334155;
+  --link-hover: #0f172a;
+  --china-red: #b91c1c;
   --china-red-soft: rgba(185, 28, 28, 0.10);
 }
 
@@ -28,7 +28,7 @@ body {
   background-color: var(--paper);
   color: var(--body);
   font-family: "Literata", Georgia, serif;
-  line-height: 1.85;         /* more “print” */
+  line-height: 1.85;
   font-size: 1.06rem;
   margin: 0;
   padding: 0;
@@ -38,7 +38,7 @@ body {
 
 /* Reading width like a magazine column */
 .wrapper {
-  max-width: 680px;          /* slightly narrower = more editorial */
+  max-width: 680px;
   padding-left: 1.25rem;
   padding-right: 1.25rem;
 }
@@ -56,7 +56,6 @@ h1, h2, h3, h4, h5, h6 {
   margin-bottom: 0.8rem;
 }
 
-/* Post title: bold, magazine-like */
 .post-title {
   font-family: "Inter", system-ui, sans-serif;
   font-weight: 800;
@@ -71,11 +70,10 @@ h1, h2, h3, h4, h5, h6 {
   margin-bottom: 1.15rem;
 }
 
-/* Subtle emphasis */
 strong { color: var(--ink); }
 
 /* =========
-   Links (with a hint of red)
+   Links
    ========= */
 a {
   color: var(--link);
@@ -86,15 +84,11 @@ a {
 
 a:hover {
   color: var(--link-hover);
-}
-
-/* Optional: a tiny “red kiss” on hover underline */
-a:hover {
   text-decoration-color: var(--china-red);
 }
 
 /* =========
-   Header / masthead (New Yorker-ish)
+   Header / masthead
    ========= */
 .site-header {
   border-bottom: 1px solid var(--line);
@@ -103,7 +97,6 @@ a:hover {
   padding-bottom: 0.9rem;
 }
 
-/* Thin red rule under header (subtle, not loud) */
 .site-header::after {
   content: "";
   display: block;
@@ -124,7 +117,7 @@ a:hover {
   text-decoration: none !important;
 }
 
-/* Nav: clean, magazine menu */
+/* Nav */
 .site-nav .page-link {
   color: var(--muted) !important;
   font-family: "Inter", system-ui, sans-serif;
@@ -142,18 +135,17 @@ a:hover {
   text-decoration: none !important;
 }
 
-/* Mobile hamburger icon visibility (minima) */
 .site-nav .menu-icon svg path {
   fill: var(--ink);
 }
 
 /* =========
-   Blockquotes (editorial pull-quote vibe)
+   Blockquotes
    ========= */
 blockquote {
   margin: 1.5rem 0;
   padding: 0.25rem 0 0.25rem 1rem;
-  border-left: 3px solid rgba(185, 28, 28, 0.35); /* red-tinted rule */
+  border-left: 3px solid rgba(185, 28, 28, 0.35);
   color: #3b4a5a;
   font-style: italic;
   background: transparent;
@@ -189,8 +181,8 @@ img {
   margin: 1.25rem 0;
 }
 
-/* If you use <figure><figcaption>… */
 figure { margin: 1.5rem 0; }
+
 figcaption {
   margin-top: 0.55rem;
   color: var(--muted);
@@ -200,31 +192,7 @@ figcaption {
 }
 
 /* =========
-   Home menu (optional)
-   ========= */
-.home-menu {
-  margin: 1.1rem 0 1.4rem 0;
-  display: flex;
-  gap: 0.9rem;
-  flex-wrap: wrap;
-}
-
-.home-chip {
-  font-family: "Inter", system-ui, sans-serif;
-  font-size: 0.92rem;
-  color: var(--muted);
-  text-decoration: none !important;
-  border-bottom: 1px solid transparent;
-  padding-bottom: 2px;
-}
-
-.home-chip:hover {
-  color: var(--ink);
-  border-bottom-color: var(--china-red);
-}
-
-/* =========
-   Tag chips (quiet editorial, with red hover)
+   Tag chips
    ========= */
 .tag-row {
   margin-top: 1.35rem;
@@ -261,7 +229,7 @@ figcaption {
 }
 
 /* =========
-   Video embeds (keep what you had)
+   Video embeds
    ========= */
 .video-wrap {
   position: relative;
@@ -281,110 +249,8 @@ figcaption {
 }
 
 /* =========
-   Mobile
+   Front page editorial styling
    ========= */
-@media (max-width: 600px) {
-  body { font-size: 1.02rem; }
-  .wrapper {
-    padding-left: 1rem;
-    padding-right: 1rem;
-  }
-}
-
-
-
-/* ===== Homepage featured post (New Yorker-style) ===== */
-.featured-card {
-  display: grid;
-  grid-template-columns: 1.1fr 1.4fr;
-  gap: 1.25rem;
-  padding: 1.2rem 0 1.4rem 0;
-  border-bottom: 1px solid var(--line);
-  margin-bottom: 1.25rem;
-}
-
-.featured-img {
-  width: 100%;
-  border-radius: 10px;
-  display: block;
-}
-
-.featured-kicker {
-  font-family: "Inter", system-ui, sans-serif;
-  font-size: 0.82rem;
-  letter-spacing: 0.10em;
-  text-transform: uppercase;
-  color: var(--muted);
-  margin-bottom: 0.35rem;
-}
-
-.featured-title {
-  margin: 0;
-}
-
-.featured-title a {
-  color: var(--ink);
-  text-decoration: none;
-}
-
-.featured-title a:hover {
-  text-decoration: underline;
-  text-decoration-color: var(--china-red);
-}
-
-.featured-date {
-  font-family: "Inter", system-ui, sans-serif;
-  font-size: 0.92rem;
-  color: var(--muted);
-  margin: 0.45rem 0 0.85rem 0;
-}
-
-.featured-excerpt {
-  margin: 0 0 0.9rem 0;
-}
-
-.featured-link {
-  font-family: "Inter", system-ui, sans-serif;
-  font-weight: 650;
-  text-decoration: none;
-}
-
-.featured-link:hover {
-  text-decoration: underline;
-  text-decoration-color: var(--china-red);
-}
-
-/* Recent list styling */
-.recent-list {
-  list-style: none;
-  padding-left: 0;
-  margin-left: 0;
-}
-
-.recent-list li {
-  display: flex;
-  justify-content: space-between;
-  gap: 1rem;
-  padding: 0.55rem 0;
-  border-bottom: 1px solid rgba(229, 231, 235, 0.6);
-}
-
-.recent-date {
-  font-family: "Inter", system-ui, sans-serif;
-  color: var(--muted);
-  font-size: 0.92rem;
-  white-space: nowrap;
-}
-
-@media (max-width: 700px) {
-  .featured-card {
-    grid-template-columns: 1fr;
-  }
-}
-
-
-
-/* ===== Front page editorial styling ===== */
 .front-dek {
   margin: 1.1rem 0 0.9rem 0;
   font-size: 1.1rem;
@@ -421,7 +287,15 @@ figcaption {
   margin-bottom: 0.7rem;
 }
 
-/* Featured card (already added earlier, keeping consistent) */
+/* Optional: red dot before section kickers */
+.front-kicker::before {
+  content: "●";
+  color: var(--china-red);
+  margin-right: 0.5rem;
+  opacity: 0.65;
+}
+
+/* Featured card layout */
 .featured-card {
   display: grid;
   grid-template-columns: 1.1fr 1.4fr;
@@ -430,10 +304,33 @@ figcaption {
   border-bottom: 1px solid var(--line);
 }
 
+/* Featured media (cover-style + optional “wider” feel) */
+.featured-media {
+  margin: 0;
+  margin-left: -0.75rem;
+  margin-right: -0.75rem;
+}
+
 .featured-img {
   width: 100%;
-  border-radius: 10px;
   display: block;
+  border-radius: 12px;
+  border: 1px solid rgba(185, 28, 28, 0.35);
+  box-shadow: 0 14px 40px rgba(15, 23, 42, 0.10);
+  margin: 0; /* override global img margin for cleaner cover look */
+}
+
+.featured-caption {
+  margin-top: 0.55rem;
+  font-family: "Inter", system-ui, sans-serif;
+  font-size: 0.88rem;
+  line-height: 1.5;
+  color: var(--muted);
+  padding-left: 0.15rem;
+}
+
+.featured-title {
+  margin: 0;
 }
 
 .featured-title a {
@@ -451,6 +348,10 @@ figcaption {
   font-size: 0.92rem;
   color: var(--muted);
   margin: 0.45rem 0 0.85rem 0;
+}
+
+.featured-excerpt {
+  margin: 0 0 0.9rem 0;
 }
 
 .featured-link {
@@ -539,47 +440,23 @@ figcaption {
   white-space: nowrap;
 }
 
+/* =========
+   Responsive
+   ========= */
 @media (max-width: 700px) {
   .featured-card {
     grid-template-columns: 1fr;
   }
-}
-
-
-
-/* ===== Featured image: cover-style treatment ===== */
-.featured-media {
-  margin: 0;
-}
-
-.featured-img {
-  width: 100%;
-  display: block;
-  border-radius: 12px;
-  border: 1px solid rgba(185, 28, 28, 0.35); /* thin China-red border */
-  box-shadow: 0 14px 40px rgba(15, 23, 42, 0.10);
-}
-
-.featured-caption {
-  margin-top: 0.55rem;
-  font-family: "Inter", system-ui, sans-serif;
-  font-size: 0.88rem;
-  line-height: 1.5;
-  color: var(--muted);
-  padding-left: 0.15rem;
-}
-
-
-
-/* Optional: make the featured image feel wider than the text column */
-.featured-media {
-  margin-left: -0.75rem;
-  margin-right: -0.75rem;
-}
-
-@media (max-width: 700px) {
   .featured-media {
     margin-left: 0;
     margin-right: 0;
+  }
+}
+
+@media (max-width: 600px) {
+  body { font-size: 1.02rem; }
+  .wrapper {
+    padding-left: 1rem;
+    padding-right: 1rem;
   }
 }
