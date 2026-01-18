@@ -19,15 +19,37 @@ Armed with a camera, I not only videoed my acting, but I also decided to take mo
 
 This inspired me to take more photos and videos of not only what I saw or myself, but also of my friends and the experiences we shared.
 
+
+![Picture of me backstage with camera]({{ 'assets/images/3434F25F-9C57-4282-9AF3-57BD6AADC75F_1_105_c.jpeg' | relative_url }})
+
+![Picture of me backstage with mic]({{ 'assets/images/72A6B91B-60D0-450C-810F-CC65604FC3F2_1_105_c.jpeg' | relative_url }})
+
+![Picture of me backstage getting makeup done]({{ 'assets/images/756F0BDA-4755-4E63-B11D-EFF8F47B2141_1_102_o.jpeg' | relative_url }})
+
+![Picture of me backstage with camera toothbrushing]({{ 'assets/images/46EF957D-6267-4B89-A6FB-5A16E7BB2798_1_102_o.jpeg' | relative_url }})
+
+
 One of the things I began to do was film vlogs and take photos of the behind-the-scenes aspects of stage productions. Not only is backstage an interesting mix of people and their feelings with adrenaline and drama, but I also feel as though the teamwork aspect of stage productions is quite underexplored. Additionally, in most circumstances I’ve found myself in for stage productions, the odds have been against us (lack of funding, institutional support), and I wanted to showcase the behind-the-scenes of that feeling and journey to success to inspire us to keep trying and working harder in the future. 
 
 From these few experiences of taking videos and pictures of my friends and family, I felt how important it is to document my life. At the same time, I came across a video of a podcast where an old man shares his biggest regret of not taking more pictures. 
 
 Screw it – I will take as many photos of what I love and those whom I love as I can. 
 
+![Picture me Chongqing bathroom]({{ 'assets/images/BB9D5CCB-E4F5-4E79-93B0-108E5E063CCF.JPG' | relative_url }})
+
 For my next semester, Spring 2024, I was headed to China. This was going to be an awesome trip with so much I knew I would want to capture on camera. It was time to pack, and I wanted to pack a camera. My father has graduated from using his camera to using his phone. He is a firm believer in making life as easy as possible. He thinks that the iPhone cameras are amazing these days and that there’s no need to lug around a camera when the phone can basically do the same thing, with added conveniences such as being able to upload and send photos as soon as you capture the moment. I get that, I totally do. I agree with it as well. But because of my experience living in Barcelona, where I took hundreds of photos and videos on my phone, I was left with a higher propensity to get distracted and stay on my phone longer than I should. Additionally, I was left with no storage. I felt like using a separate camera would allow me to remedy these issues and take photos more deliberately. 
 
+![Picture in Wuxi]({{ 'assets/images/4C1BA20A-3F23-4F64-9824-00B2C3E364E6_1_105_c.jpeg' | relative_url }})
+
+![Picture Shanghai bricks]({{ 'assets/images/86EBEA09-D54A-4053-A0B7-35C338941583_1_105_c.jpeg' | relative_url }})
+
+![Picture in Wuxi of the whole thing]({{ 'assets/images/7C9C2628-EBE7-4981-B660-828A3B5A586B_1_105_c.jpeg' | relative_url }})
+
+![Picture Shanghai Walls]({{ 'assets/images/A0268D74-B516-403C-AFB4-BA0E55C79513_1_105_c.jpeg' | relative_url }})
+
 What do I mean by more deliberately? I had an interesting talk with a film professor who said that “the mark of a good artist is knowing when to stop.” It’s about not letting perfectionism get the best of you. This was extremely formative, as I struggled profoundly with stopping. This goes for my videos, papers, and music. The only thing that helps me get my papers done is the deadline. That’s why on this blog, I want to practice writing in a fashion that pushes me to just put it out there and be done with it. 
+
+![Picture me Chongqing top building]({{ 'assets/images/C2BC75D8-F869-43AD-BCB0-DE6BE0388164.JPG' | relative_url }})
 
 As I was packing for the three semesters of my life, I searched my parents’ old things, looking for their digital cameras and struggling to prepare them for travel. Observing me struggle here, my dad pushes me to take his camera, the Lumix. He said, “Take it, it’s also thinner and lighter, so it won’t be such a burden.” I was hesitant. This camera means so much to my family, and I just felt like I couldn’t be trusted with it. That I’d break it or lose it. My father comforted me, reminding me that this camera is a tool. The more I see it as a tool, the more I would use it and enjoy it. “If you lose it, you lose it. If it breaks, it breaks. More reason to buy you a new camera.” I couldn’t deny that logic, so with the biggest smile on my face, I packed his camera into my suitcase. From that moment onwards, he would always correct me; I would show him a photo, saying, “I took this with your camera,” and he would say, “Ace, you took it with your camera. What’s mine is yours.” 
 
@@ -35,7 +57,11 @@ Immediate tears down my face.
 
 I guess the reason I’m so attached to this object is that I see it as our journey as father, son, and my family. We all love each other so much, and as a family, we have all been made keenly aware of how lucky we are and how temporary life is. 
 
+![Picture cafe Suzhou mirror ]({{ 'assets/images/7DAC78B0-EFC3-476A-ACB4-954B77881FD8_1_105_c.jpeg' | relative_url }})
+
 I see it as a full-circle moment: I spent the beginning of my life in front of the camera as a kid experiencing the world. And now, that kid is on the other side of the lens, still chasing the same wonder, only this time he’s carrying the camera and letting it see the world the way he always has.
+
+![Picture cafe Chengdu Buddah Temple]({{ 'assets/images/B1B38F0D-5D87-4442-B0EA-8C9DF19FAA4B_1_105_c.jpeg' | relative_url }})
 
 And if you’re wondering about that sticker on the lens cap of China’s flag…
 
@@ -45,7 +71,21 @@ To more adventures, more good moments, and more good food.
 
 I hope this year brings you success, good health, and above all, happiness. 
 
+![Picture cafe Suzhou bunny]({{ 'assets/images/CF49098E-7446-4E11-B163-47D3E3DDB2AB_1_105_c.jpeg' | relative_url }})
+
 I’m going to go eat some burgers now.
+
+
+![Picture of Nature Cafe]({{ 'assets/images/2CDFBEEB-28CD-4479-B023-1CD6E334217F_1_105_c.jpeg' | relative_url }})
+
+
+![Picture of gentle monster]({{ 'assets/images/B187B629-0C1D-449D-873B-17AD23A4A072_1_102_a.jpeg' | relative_url }})
+
+
+![Picture of Wuxi flowers]({{ 'assets/images/F9070070-DFE2-4E7D-A529-7468BCD57AE6_1_105_c.jpeg' | relative_url }})
+
+
+![Picture of Hokkaido]({{ 'assets/images/181D45FA-1793-47F3-9016-1F3FE34AFAF8_1_105_c.jpeg' | relative_url }})
 
 
 ---
