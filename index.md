@@ -17,11 +17,17 @@ title: Home
 
   <div class="featured-card">
 
-    {% if latest.image %}
-    <a href="{{ latest.url | relative_url }}">
-      <img class="featured-img" src="{{ latest.image | relative_url }}" alt="{{ latest.title }}">
-    </a>
-    {% endif %}
+{% if latest.image %}
+<div class="featured-media">
+  <a href="{{ latest.url | relative_url }}">
+    <img class="featured-img" src="{{ latest.image | relative_url }}" alt="{{ latest.title }}">
+  </a>
+
+  {% if latest.image_caption %}
+    <div class="featured-caption">{{ latest.image_caption }}</div>
+  {% endif %}
+</div>
+{% endif %}
 
     <div class="featured-text">
       <h2 class="featured-title">
