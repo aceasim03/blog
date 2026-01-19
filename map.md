@@ -32,11 +32,10 @@ permalink: /map/
   // Init map
   const map = L.map("post-map", { scrollWheelZoom: false }).setView([25, 10], 2);
 
-  // Tiles (OpenStreetMap)
-  L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
-    maxZoom: 18,
-    attribution: '&copy; OpenStreetMap contributors'
-  }).addTo(map);
+L.tileLayer("https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png", {
+  maxZoom: 19,
+  attribution: '&copy; OpenStreetMap contributors &copy; CARTO'
+}).addTo(map);
 
   // Add markers
   const bounds = [];
