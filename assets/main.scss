@@ -562,3 +562,46 @@ figcaption {
   padding: 0.12rem 0.45rem;
   border-radius: 999px;
 }
+
+
+
+
+/* ===== Map page styling (editorial) ===== */
+#post-map {
+  border-radius: 14px;
+  border: 1px solid rgba(15, 23, 42, 0.08);
+  box-shadow: 0 14px 40px rgba(15, 23, 42, 0.08);
+  overflow: hidden;
+}
+
+/* Leaflet UI controls */
+.leaflet-control-zoom a {
+  background: var(--paper) !important;
+  color: var(--ink) !important;
+  border: 1px solid rgba(15, 23, 42, 0.10) !important;
+  box-shadow: none !important;
+}
+
+.leaflet-control-zoom a:hover {
+  background: rgba(185, 28, 28, 0.06) !important;
+}
+
+/* Popup styling (make it “magazine”) */
+.leaflet-popup-content-wrapper {
+  background: var(--paper) !important;
+  color: var(--body) !important;
+  border: 1px solid rgba(15, 23, 42, 0.10) !important;
+  border-radius: 12px !important;
+  box-shadow: 0 16px 50px rgba(15, 23, 42, 0.12) !important;
+}
+
+.leaflet-popup-tip {
+  background: var(--paper) !important;
+  border: 1px solid rgba(15, 23, 42, 0.10) !important;
+}
+
+/* Make popup links feel consistent */
+.leaflet-popup-content a {
+  color: var(--ink) !important;
+  text-decoration-color: var(--china-red) !important;
+}
