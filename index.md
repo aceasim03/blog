@@ -2,6 +2,23 @@
 layout: home
 title: Home
 ---
+{% assign featured = site.posts.first %}
+
+{% if featured and featured.image %}
+<section class="hero">
+  <a class="hero-link" href="{{ featured.url | relative_url }}">
+    <img class="hero-img" src="{{ featured.image | relative_url }}" alt="{{ featured.title }}">
+    <div class="hero-overlay">
+      <div class="hero-kicker">Fragments</div>
+      <div class="hero-title">{{ featured.title }}</div>
+      <div class="hero-sub">
+        {{ featured.date | date: "%B %d, %Y" }}{% if featured.where %} · {{ featured.where }}{% endif %}
+      </div>
+    </div>
+  </a>
+</section>
+{% endif %}
+
 
 <div class="front-dek">
   Essays and field notes on <strong>AI ethics</strong>, <strong>culture</strong>, and <strong>travel</strong>.
