@@ -1,6 +1,7 @@
 ---
-layout: home
+layout: page
 title: Home
+permalink: /
 ---
 
 {% assign featured = site.posts.first %}
@@ -8,7 +9,6 @@ title: Home
 {% if featured %}
 <section class="hero">
   <a class="hero-link" href="{{ featured.url | relative_url }}">
-
     {% if featured.image %}
       <img class="hero-img" src="{{ featured.image | relative_url }}" alt="{{ featured.title }}">
       <div class="hero-overlay">
@@ -28,7 +28,6 @@ title: Home
         <div class="hero-cta">Read →</div>
       </div>
     {% endif %}
-
   </a>
 </section>
 {% endif %}
@@ -40,26 +39,18 @@ title: Home
 
   {%- assign pick_travel = nil -%}
   {%- for post in site.posts -%}
-    {%- if featured and post.url == featured.url -%}
-      {%- continue -%}
-    {%- endif -%}
+    {%- if featured and post.url == featured.url -%}{%- continue -%}{%- endif -%}
     {%- if post.tags contains "Travel" -%}
-      {%- assign pick_travel = post -%}
-      {%- break -%}
+      {%- assign pick_travel = post -%}{%- break -%}
     {%- endif -%}
   {%- endfor -%}
 
   {%- assign pick_reflection = nil -%}
   {%- for post in site.posts -%}
-    {%- if featured and post.url == featured.url -%}
-      {%- continue -%}
-    {%- endif -%}
-    {%- if pick_travel and post.url == pick_travel.url -%}
-      {%- continue -%}
-    {%- endif -%}
+    {%- if featured and post.url == featured.url -%}{%- continue -%}{%- endif -%}
+    {%- if pick_travel and post.url == pick_travel.url -%}{%- continue -%}{%- endif -%}
     {%- if post.tags contains "Reflection" -%}
-      {%- assign pick_reflection = post -%}
-      {%- break -%}
+      {%- assign pick_reflection = post -%}{%- break -%}
     {%- endif -%}
   {%- endfor -%}
 
@@ -95,5 +86,32 @@ title: Home
     <a href="{{ '/topics/' | relative_url }}">Topics →</a>
     &nbsp;&nbsp;·&nbsp;&nbsp;
     <a href="{{ '/all-posts/' | relative_url }}">All posts →</a>
+    &nbsp;&nbsp;·&nbsp;&nbsp;
+    <a href="{{ '/map/' | relative_url }}">Map →</a>
+  </div>
+</section>
+
+<section class="after-strip">
+  <div class="after-kicker">Elsewhere</div>
+  <p class="after-text">
+    Notes written between <strong>New Jersey</strong>, <strong>Beijing</strong>, <strong>Shanghai</strong>, and <strong>Takasaki</strong>.
+    A notebook for ethics, art, and motion.
+  </p>
+
+  <div class="after-grid">
+    <a class="after-card" href="{{ '/topics/' | relative_url }}">
+      <div class="after-title">Browse Topics</div>
+      <div class="after-sub">AI ethics · travel · reflection</div>
+    </a>
+
+    <a class="after-card" href="{{ '/all-posts/' | relative_url }}">
+      <div class="after-title">Archive</div>
+      <div class="after-sub">Every post, in order</div>
+    </a>
+
+    <a class="after-card" href="{{ '/map/' | relative_url }}">
+      <div class="after-title">Writing Map</div>
+      <div class="after-sub">Posts pinned by place</div>
+    </a>
   </div>
 </section>
