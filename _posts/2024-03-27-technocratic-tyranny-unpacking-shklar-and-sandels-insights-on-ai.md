@@ -34,10 +34,10 @@ When confronting the challenges posed by AI governance, it is imperative to reco
 In conclusion, the insights of Shklar and Sandel provide a framework for reimagining AI governance in pursuit of a more just and equitable society. By integrating their critiques into the discourse surrounding AI development, we can challenge the prevailing narratives of meritocracy and technocracy, striving to create a future where the common good takes precedence over narrow self-interest. Only through a concerted effort to address the ethical implications of AI can we hope to realize a vision of a society where fear is mitigated, power is dispersed, and human dignity is upheld.
 
 ## References
-
 Sandel, Michael J. The Tyranny of Merit: What’s Become of the Common Good? MacMillan Press, 2020.
-
 Shklar, Judith. “The Liberalism of Fear.” In Liberalism and the Moral Life. Ed. Nancy Rosenblum. Harvard University Press, 1989.
+
+
 ---
 
 {% if page.tags %}
