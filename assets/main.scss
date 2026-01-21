@@ -669,3 +669,20 @@ figcaption {
   .hero-img { height: 320px; }
   .hero-title { font-size: 1.55rem; }
 }
+
+
+/* Hero fallback when no image exists */
+.hero-blank {
+  background: linear-gradient(to bottom right, rgba(185, 28, 28, 0.08), rgba(15, 23, 42, 0.04));
+  padding: 1.35rem 1.25rem 1.2rem 1.25rem;
+}
+
+.hero-cta {
+  margin-top: 0.9rem;
+  font-family: "Inter", system-ui, sans-serif;
+  font-weight: 700;
+  color: var(--ink);
+  text-decoration: underline;
+  text-decoration-color: var(--china-red);
+  text-underline-offset: 3px;
+}
