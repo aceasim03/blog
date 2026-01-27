@@ -4,74 +4,55 @@ title: Map
 permalink: /map/
 ---
 
-<p class="map-intro">
-  A small atlas of where these notes were written.
-</p>
+<p class="map-intro">A small atlas of where these notes were written.</p>
 
-<div class="flatmap">
-  <img class="flatmap-base" src="{{ '/assets/world.svg' | relative_url }}" alt="World map">
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
 
-  <!-- Dots: positioned by percent (responsive) -->
-  <button class="pin pin-nj" data-place="New Jersey">NJ</button>
-  <button class="pin pin-bj" data-place="Beijing">BJ</button>
-  <button class="pin pin-sh" data-place="Shanghai">SH</button>
-  <button class="pin pin-tk" data-place="Takasaki">TK</button>
-</div>
-
-<div id="place-panel" class="place-panel" aria-live="polite">
-  <div class="place-title">Click a dot</div>
-  <div class="place-sub">New Jersey · Beijing · Shanghai · Takasaki</div>
-</div>
+<div id="post-map"></div>
 
 <script>
-  // Build a location index from your posts
   const posts = [
     {% for post in site.posts %}
-      {
-        title: {{ post.title | jsonify }},
-        url: {{ post.url | relative_url | jsonify }},
-        date: {{ post.date | date: "%Y-%m-%d" | jsonify }},
-        where: {{ post.where | default: "" | jsonify }}
-      },
+      {% if post.lat and post.lng %}
+        {
+          title: {{ post.title | jsonify }},
+          url: {{ post.url | relative_url | jsonify }},
+          date: {{ post.date | date: "%Y-%m-%d" | jsonify }},
+          where: {{ post.where | default: "" | jsonify }},
+          lat: {{ post.lat }},
+          lng: {{ post.lng }}
+        },
+      {% endif %}
     {% endfor %}
   ];
 
-  function postsFor(place) {
-    const p = place.toLowerCase();
-    return posts.filter(x => (x.where || "").toLowerCase().includes(p));
-  }
+  const map = L.map("post-map", {
+    zoomControl: false,        // remove +/-
+    scrollWheelZoom: false,    // no “map app” scrolling
+    dragging: true,            // allow gentle dragging
+    doubleClickZoom: false
+  }).setView([25, 10], 2);
 
-  const panel = document.getElementById("place-panel");
+  // Minimal basemap (Carto Positron)
+  L.tileLayer("https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png", {
+    maxZoom: 19,
+    attribution: '&copy; OpenStreetMap contributors &copy; CARTO'
+  }).addTo(map);
 
-  document.querySelectorAll(".pin").forEach(btn => {
-    btn.addEventListener("click", () => {
-      const place = btn.dataset.place;
-      const list = postsFor(place);
+  const dotIcon = L.divIcon({ className: "post-dot", iconSize: [14, 14] });
 
-      const items = list.length
-        ? `<ul class="place-list">
-            ${list.map(p => `
-              <li>
-                <a href="${p.url}">${p.title}</a>
-                <span class="place-date">${p.date}</span>
-              </li>
-            `).join("")}
-          </ul>`
-        : `<div class="place-empty">No posts tagged with this location yet.</div>`;
-
-      panel.innerHTML = `
-        <div class="place-title">${place}</div>
-        <div class="place-sub">${list.length} post${list.length === 1 ? "" : "s"}</div>
-        ${items}
-      `;
-    });
+  const bounds = [];
+  posts.forEach(p => {
+    const m = L.marker([p.lat, p.lng], { icon: dotIcon }).addTo(map);
+    m.bindPopup(`
+      <div class="map-popup">
+        <div class="map-popup-title"><a href="${p.url}">${p.title}</a></div>
+        <div class="map-popup-meta">${p.date}${p.where ? " · " + p.where : ""}</div>
+      </div>
+    `);
+    bounds.push([p.lat, p.lng]);
   });
+
+  if (bounds.length) map.fitBounds(bounds, { padding: [30, 30] });
 </script>
-
-
-
-
-<p class="map-credit">
-  Map graphic: <a href="https://mapsvg.com/maps/world" target="_blank" rel="noopener">Creative Commons</a>,
-  licensed under <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener">CC BY 4.0</a>.
-</p>
