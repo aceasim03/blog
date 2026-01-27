@@ -750,114 +750,41 @@ figcaption {
 }
 
 
-/* ===== Flat map (minimal pinboard) ===== */
-.map-intro {
-  margin: 0.4rem 0 1rem 0;
-  color: var(--muted);
-}
-
-.flatmap {
-  position: relative;
-  width: 100%;
+#post-map {
+  height: 520px;
   border-radius: 14px;
   border: 1px solid rgba(15, 23, 42, 0.10);
-  background: linear-gradient(to bottom right, #ffffff, rgba(185, 28, 28, 0.03));
-  overflow: hidden;
   box-shadow: 0 14px 40px rgba(15, 23, 42, 0.08);
+  overflow: hidden;
 }
 
-.flatmap-base {
-  width: 100%;
-  display: block;
-  opacity: 0.9;
-  filter: grayscale(100%) contrast(95%);
-}
-
-/* The pins */
-.pin {
-  position: absolute;
-  width: 34px;
-  height: 34px;
+/* dot pins */
+.post-dot {
+  width: 14px;
+  height: 14px;
   border-radius: 999px;
-  border: 2px solid var(--paper);
   background: rgba(185, 28, 28, 0.88);
-  color: white;
+  border: 2px solid var(--paper);
+  box-shadow: 0 10px 22px rgba(15, 23, 42, 0.18);
+}
+
+/* popup styling */
+.map-popup-title a {
+  color: var(--ink);
+  text-decoration-color: var(--china-red);
   font-family: "Inter", system-ui, sans-serif;
   font-weight: 800;
-  font-size: 0.78rem;
-  cursor: pointer;
-  box-shadow: 0 10px 22px rgba(15, 23, 42, 0.22);
-  display: grid;
-  place-items: center;
 }
 
-.pin:hover {
-  transform: translateY(-1px);
-  background: rgba(185, 28, 28, 0.95);
-}
-
-/* Pin placement by percentage (tweak if you change SVG projection) */
-.pin-nj { left: 28%; top: 33%; }      /* New Jersey */
-.pin-bj { left: 72%; top: 32%; }      /* Beijing */
-.pin-sh { left: 74.5%; top: 40%; }    /* Shanghai */
-.pin-tk { left: 79%; top: 36%; }      /* Takasaki */
-
-/* Panel */
-.place-panel {
-  margin-top: 1rem;
-  border-radius: 14px;
-  border: 1px solid rgba(15, 23, 42, 0.10);
-  background: #fff;
-  padding: 1rem 1rem 0.95rem 1rem;
-}
-
-.place-title {
-  font-family: "Inter", system-ui, sans-serif;
-  font-weight: 900;
-  color: var(--ink);
-}
-
-.place-sub {
+.map-popup-meta {
   margin-top: 0.25rem;
   color: var(--muted);
   font-family: "Inter", system-ui, sans-serif;
   font-size: 0.92rem;
 }
 
-.place-list {
-  margin: 0.85rem 0 0 0;
-  padding-left: 0;
-  list-style: none;
-}
-
-.place-list li {
-  padding: 0.55rem 0;
-  border-top: 1px solid rgba(229, 231, 235, 0.7);
-  display: flex;
-  justify-content: space-between;
-  gap: 1rem;
-}
-
-.place-date {
-  font-family: "Inter", system-ui, sans-serif;
-  color: var(--muted);
-  font-size: 0.9rem;
-  white-space: nowrap;
-}
-
-.place-empty {
-  margin-top: 0.85rem;
-  color: var(--muted);
-}
-
-/* Mobile tweaks */
-@media (max-width: 600px) {
-  .pin { width: 30px; height: 30px; }
-}
-
-
-.map-credit {
-  margin-top: 1rem;
-  color: var(--muted);
-  font-size: 0.9rem;
+/* reduce “map app” feel */
+.leaflet-control-attribution {
+  font-size: 0.7rem;
+  opacity: 0.6;
 }
