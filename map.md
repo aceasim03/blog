@@ -28,31 +28,43 @@ permalink: /map/
   ];
 
   const map = L.map("post-map", {
-    zoomControl: false,        // remove +/-
-    scrollWheelZoom: false,    // no “map app” scrolling
-    dragging: true,            // allow gentle dragging
-    doubleClickZoom: false
+    zoomControl: false,
+    scrollWheelZoom: false,
+    dragging: true,
+    doubleClickZoom: false,
+    attributionControl: false
   }).setView([25, 10], 2);
 
-  // Minimal basemap (Carto Positron)
-  L.tileLayer("https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png", {
-    maxZoom: 19,
-    attribution: '&copy; OpenStreetMap contributors &copy; CARTO'
+  // Option 1: very light, almost flat basemap
+  L.tileLayer("https://{s}.basemaps.cartocdn.com/light_nolabels/{z}/{x}/{y}{r}.png", {
+    maxZoom: 10
   }).addTo(map);
 
-  const dotIcon = L.divIcon({ className: "post-dot", iconSize: [14, 14] });
+  // Minimalist red dot marker
+  const dotIcon = L.divIcon({
+    className: "post-dot",
+    iconSize: [10, 10]
+  });
 
   const bounds = [];
   posts.forEach(p => {
     const m = L.marker([p.lat, p.lng], { icon: dotIcon }).addTo(map);
-    m.bindPopup(`
-      <div class="map-popup">
-        <div class="map-popup-title"><a href="${p.url}">${p.title}</a></div>
-        <div class="map-popup-meta">${p.date}${p.where ? " · " + p.where : ""}</div>
-      </div>
-    `);
+
+    // click goes straight to the post
+    m.on("click", () => {
+      window.location.href = p.url;
+    });
+
+    // optional: simple tooltip on hover
+    m.bindTooltip(
+      `${p.title}${p.where ? " · " + p.where : ""}`,
+      { direction: "top", offset: [0, -8], opacity: 0.9 }
+    );
+
     bounds.push([p.lat, p.lng]);
   });
 
-  if (bounds.length) map.fitBounds(bounds, { padding: [30, 30] });
+  if (bounds.length) {
+    map.fitBounds(bounds, { padding: [30, 30] });
+  }
 </script>
