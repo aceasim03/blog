@@ -3,8 +3,8 @@ layout: post
 title: "A Love Letter to My Lumix Camera"
 date: 2026-01-16
 where: "Philadelphia, USA"
-lat: 39.95
-lng: 75.17
+lat: 39.9526
+lng: 75.1652
 tags: [Art, Travel, Reflection]
 image: assets/images/C6FF8F1C-246A-475C-98FE-A0A35ABC3243_1_102_o.jpeg
 image_caption: "A picture of my camera taken by an a photographer who stumbled across it | Suzhou, 3.2024"
