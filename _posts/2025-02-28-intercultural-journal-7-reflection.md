@@ -10,11 +10,8 @@ tags: [Reflection, Culture, Travel]
 
 I think that because this is the last journal for the class, I should reflect on my growth over the past seven weeks.
 
-Let me start by listing some of the things I learned in this course:
-
-
 <div class="overview">
-  <div class="overview-kicker">In this piece</div>
+  <div class="overview-kicker">Let me start by listing some of the things I learned in this course</div>
   <ul class="overview-list">
     <li><a href="#something-is-better-than-nothing">I. Something is better than nothing, everything is a process</a></li>
     <li><a href="#always-have-a-smile-on-your-face">II. Always have a smile on your face</a></li>
