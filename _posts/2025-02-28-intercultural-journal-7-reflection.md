@@ -12,16 +12,21 @@ I think that because this is the last journal for the class, I should reflect on
 
 Let me start by listing some of the things I learned in this course:
 
-_**I. Something is better than nothing, everything is a process
+
+**_I. Something is better than nothing, everything is a process
+
 II. Always have a smile on your face
+
 III. Get through the tough stuff, it’s the only way to grow
-IV. Keep pondering and reflecting**_
+
+IV. Keep pondering and reflecting
+_**
 
 Of course, I learned some awesome things about Suzhou, design-thinking, and intercultural communication, but I would like to say that I truly learned these things outside of the class on my trip to Suzhou to film this video.
 
 <div class="video-wrap">
   <iframe
-    src="https://www.youtube.com/embed/BhkSF2hr74"
+    src="https://www.youtube.com/embed/-BhkSF2hr74"
     title="Weaving Studies & Tourism in Suzhou | The Silk Threads Method"
     frameborder="0"
     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
@@ -29,7 +34,14 @@ Of course, I learned some awesome things about Suzhou, design-thinking, and inte
   </iframe>
 </div>
 
-https://sites.duke.edu/aasim/files/2025/02/A.-Asim-The-Silk-Threads-Method-WOC-106-Final-Project-Proposal.pdf
+<div class="pdf-wrap">
+  <iframe
+    src="https://sites.duke.edu/aasim/files/2025/02/A.-Asim-The-Silk-Threads-Method-WOC-106-Final-Project-Proposal.pdf"
+    title="The Silk Threads Method – PDF"
+    width="100%"
+    height="600">
+  </iframe>
+</div>
 
 For our final project, we had to find creative ways to use the things we learned in class to show a potential tourist around Suzhou. Some students made pamphlets, photo albums, and interactive maps, but I made a video. For me, video is the easiest way to get things across since it’s the closest thing to real-life interactions we have. For a course on intercultural communication and Suzhou, I felt video was the best way I could bring justice to it.
 
