@@ -4,6 +4,23 @@ title: Home
 permalink: /
 ---
 
+<section class="welcome">
+  <div class="welcome-kicker">Editor’s note</div>
+  <h1 class="welcome-title">
+    Fragments from AI, travel, and in‑between places.
+  </h1>
+  <p class="welcome-text">
+    I’m Ace, a grad student keeping a running notebook on AI ethics,
+    culture, travel, and the philosophies that surface in everyday life.
+  </p>
+  <div class="welcome-links">
+    <a href="{{ '/start/' | relative_url }}" class="welcome-link">Start here</a>
+    <a href="{{ '/map/' | relative_url }}" class="welcome-link">Travel map</a>
+    <a href="{{ '/all-posts/' | relative_url }}" class="welcome-link">All posts</a>
+  </div>
+</section>
+
+
 {% assign featured = site.posts.first %}
 
 {% if featured %}
