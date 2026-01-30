@@ -2,6 +2,9 @@
 layout: post
 title: "Intercultural Journal #4 | Talking to Locals"
 date: 2025-02-04
+where: "Suzhou, China"
+lat: 31.2983
+lng: 120.5832
 tags: [Travel, Reflection, Culture]
 ---
 
