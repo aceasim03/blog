@@ -2,6 +2,9 @@
 layout: post
 title: "Intercultural Journal #3 | Culture and Childhood"
 date: 2025-01-29
+where: "Suzhou, China"
+lat: 31.2983
+lng: 120.5832
 tags: [Travel, Reflection, Culture]
 ---
 
