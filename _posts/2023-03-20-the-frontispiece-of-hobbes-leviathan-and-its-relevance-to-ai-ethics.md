@@ -2,6 +2,9 @@
 layout: post
 title: "THE FRONTISPIECE OF HOBBES' LEVIATHAN AND ITS RELEVANCE TO AI ETHICS"
 date: 2023-03-20
+where: "Takasaki, Japan"
+lat: 36.3221
+lng: 139.0034
 tags: [AI Ethics, Art]
 ---
 
