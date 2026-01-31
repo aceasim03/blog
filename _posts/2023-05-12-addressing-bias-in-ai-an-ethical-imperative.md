@@ -2,6 +2,9 @@
 layout: post
 title: "ADDRESSING BIAS IN AI: AN ETHICAL IMPERATIVE"
 date: 2023-05-12
+where: "Takasaki, Japan"
+lat: 36.3221
+lng: 139.0034
 tags: [AI Ethics]
 ---
 
