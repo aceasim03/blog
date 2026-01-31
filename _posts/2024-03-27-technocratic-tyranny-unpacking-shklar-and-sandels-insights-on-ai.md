@@ -2,6 +2,9 @@
 layout: post
 title: "TECHNOCRATIC TYRANNY: UNPACKING SHKLAR AND SANDEL'S INSIGHTS ON AI"
 date: 2024-03-27
+where: "Suzhou, China"
+lat: 31.2983
+lng: 120.5832
 tags: [AI Ethics, Philosophy]
 ---
 
