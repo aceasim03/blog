@@ -2,6 +2,9 @@
 layout: post
 title: "Intercultural Journal #1 | Finding Home in a World of Flavors"
 date: 2025-01-11
+where: "Suzhou, China"
+lat: 31.2983
+lng: 120.5832
 tags: [Travel, Reflection, Culture]
 ---
 
