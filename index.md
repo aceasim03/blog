@@ -81,13 +81,7 @@ permalink: /
     {% endif %}
   </ul>
 
-  <div class="front-more">
-    <a href="{{ '/topics/' | relative_url }}">Topics →</a>
-    &nbsp;&nbsp;·&nbsp;&nbsp;
-    <a href="{{ '/all-posts/' | relative_url }}">All posts →</a>
-    &nbsp;&nbsp;·&nbsp;&nbsp;
-    <a href="{{ '/map/' | relative_url }}">Map →</a>
-  </div>
+
 </section>
 
 <section class="after-strip">
