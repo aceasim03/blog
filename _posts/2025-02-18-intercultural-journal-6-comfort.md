@@ -8,8 +8,8 @@ lng: 121.4737
 tags: [Reflection, Culture, Travel]
 ---
 
-_This is a reflection from my limited experience as an international student/visitor and isn’t meant to speak for everyone in China or Japan.
-_
+**This is a reflection from my limited experience as an international student/visitor and isn’t meant to speak for everyone in China or Japan.
+**
 I was in Shanghai the other day and spent some time people‑watching. I was noticing how many people around me seemed at ease in their routines and environments. It reminded me of my time in Japan, where I also had the impression that a lot of people across different ages and backgrounds moved through daily life in a way that felt settled and familiar to them.
 
 What I mean by “comfortable” here is feeling integrated into a system and society so that many everyday things are relatively frictionless. I’ve seen interviews asking people in Japan and China whether they’d like to move abroad, and I’ve also heard friends and acquaintances talk about this. Some express curiosity about going elsewhere, but also describe feeling deeply rooted where they are—partly because they anticipate the discomfort and uncertainty of starting over in a new place.
