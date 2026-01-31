@@ -856,7 +856,14 @@ figcaption {
   background: rgba(185, 28, 28, 0.88);
   border: 2px solid var(--paper);
   box-shadow: 0 10px 22px rgba(15, 23, 42, 0.18);
+  transition: transform 120ms ease-out, box-shadow 120ms ease-out;
 }
+
+.post-dot:hover {
+  transform: scale(1.15);
+  box-shadow: 0 14px 30px rgba(15, 23, 42, 0.28);
+}
+
 
 /* popup styling */
 .map-popup-title a {
