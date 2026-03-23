@@ -19,7 +19,25 @@
   --link-hover: #0f172a;
   --china-red: #b91c1c;
   --china-red-soft: rgba(185, 28, 28, 0.10);
+  --shadow-soft: 0 4px 24px rgba(15, 23, 42, 0.07);
+  --shadow-card: 0 10px 40px rgba(15, 23, 42, 0.09);
+  --transition: 150ms ease;
+  --radius: 14px;
 }
+
+/* Reading progress bar — shown on post pages */
+.reading-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 2px;
+  width: 0%;
+  background: var(--china-red);
+  z-index: 9999;
+  transition: width 100ms linear;
+  opacity: 0.75;
+}
+
 
 /* =========
    Global
@@ -92,9 +110,14 @@ a:hover {
    ========= */
 .site-header {
   border-bottom: 1px solid var(--line);
-  background-color: var(--paper);
+  background-color: rgba(251, 250, 247, 0.92);
   padding-top: 0.95rem;
   padding-bottom: 0.9rem;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  backdrop-filter: blur(8px);
+  background-color: rgba(251, 250, 247, 0.92); /* --paper at 92% opacity */
 }
 
 .site-header::after {
@@ -356,7 +379,7 @@ figcaption {
 
 .featured-link {
   font-family: "Inter", system-ui, sans-serif;
-  font-weight: 650;
+  font-weight: 600;
   text-decoration: none;
 }
 
@@ -373,10 +396,19 @@ figcaption {
   border-top: 1px solid var(--line);
 }
 
+/* REPLACE existing .front-item */
 .front-item {
-  padding: 1rem 0 1.1rem 0;
+  padding: 1rem 0.75rem 1.1rem 0.75rem;
   border-bottom: 1px solid rgba(229, 231, 235, 0.6);
+  border-radius: 10px;
+  transition: background var(--transition);
+  margin: 0 -0.75rem;
 }
+
+.front-item:hover {
+  background: rgba(185, 28, 28, 0.03);
+}
+
 
 .front-item-date {
   font-family: "Inter", system-ui, sans-serif;
@@ -388,7 +420,7 @@ figcaption {
   display: inline-block;
   margin-top: 0.25rem;
   font-family: "Inter", system-ui, sans-serif;
-  font-weight: 750;
+  font-weight: 700;
   color: var(--ink);
   text-decoration: none;
 }
@@ -512,7 +544,7 @@ figcaption {
 .timeline-links {
   margin-top: 0.55rem;
   font-family: "Inter", system-ui, sans-serif;
-  font-weight: 650;
+  font-weight: 600;
 }
 
 @media (max-width: 700px) {
@@ -551,28 +583,29 @@ figcaption {
   gap: 0.6rem;
 }
 
+/* REPLACE .front-item-pill */
 .front-item-pill {
   font-family: "Inter", system-ui, sans-serif;
-  font-size: 0.75rem;
-  letter-spacing: 0.08em;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
   text-transform: uppercase;
   color: var(--china-red);
-  border: 1px solid rgba(185, 28, 28, 0.25);
-  background: rgba(185, 28, 28, 0.06);
-  padding: 0.12rem 0.45rem;
+  border: 1px solid rgba(185, 28, 28, 0.28);
+  background: rgba(185, 28, 28, 0.07);
+  padding: 0.14rem 0.5rem;
   border-radius: 999px;
+  transition: background var(--transition);
+}
+
+.front-item:hover .front-item-pill {
+  background: rgba(185, 28, 28, 0.13);
 }
 
 
 
 
-/* ===== Map page styling (editorial) ===== */
-#post-map {
-  border-radius: 14px;
-  border: 1px solid rgba(15, 23, 42, 0.08);
-  box-shadow: 0 14px 40px rgba(15, 23, 42, 0.08);
-  overflow: hidden;
-}
+
 
 /* Leaflet UI controls */
 .leaflet-control-zoom a {
@@ -685,7 +718,7 @@ figcaption {
   display: inline-block;
   margin-top: 0.2rem;
   font-family: "Inter", system-ui, sans-serif;
-  font-weight: 750;
+  font-weight: 700;
   color: var(--ink);
   text-decoration: none;
 }
@@ -704,6 +737,7 @@ figcaption {
   overflow: hidden;
   border: 1px solid rgba(15, 23, 42, 0.10);
   box-shadow: 0 18px 60px rgba(15, 23, 42, 0.10);
+  transition: box-shadow var(--transition);
 }
 
 .hero-link {
@@ -719,6 +753,11 @@ figcaption {
   display: block;
   margin: 0 !important;
   border-radius: 0;
+  transition: transform 400ms ease;
+}
+
+.hero-link:hover .hero-img {
+  transform: scale(1.02);
 }
 
 .hero-overlay {
@@ -742,7 +781,7 @@ figcaption {
 .hero-title {
   margin-top: 0.35rem;
   font-family: "Inter", system-ui, sans-serif;
-  font-weight: 850;
+  font-weight: 800;
   font-size: 2rem;
   line-height: 1.05;
   color: #fff;
@@ -813,12 +852,25 @@ figcaption {
   border-radius: 14px;
   padding: 1rem 1rem 0.95rem 1rem;
   box-shadow: 0 10px 30px rgba(15, 23, 42, 0.06);
+  transition: transform var(--transition), box-shadow var(--transition), border-color var(--transition);
+  position: relative;
 }
 
 .after-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 16px 48px rgba(15, 23, 42, 0.10);
   border-color: rgba(185, 28, 28, 0.30);
   background: rgba(185, 28, 28, 0.04);
 }
+
+
+.after-title::after {
+  content: " →";
+  opacity: 0;
+  transition: opacity var(--transition);
+  color: var(--china-red);
+}
+
 
 .after-title {
   font-family: "Inter", system-ui, sans-serif;
