@@ -19,12 +19,17 @@ permalink: /
       </div>
     {% else %}
       <div class="hero-blank">
-        <div class="hero-kicker">Fragments</div>
+        <div class="hero-kicker">Latest</div>
         <div class="hero-title">{{ featured.title }}</div>
         <div class="hero-sub">
           {{ featured.date | date: "%B %d, %Y" }}{% if featured.where %} · {{ featured.where }}{% endif %}
         </div>
-        <div class="hero-cta">Read →</div>
+        {% if featured.excerpt %}
+        <div class="hero-excerpt">
+          {{ featured.excerpt | strip_html | truncate: 120 }}
+        </div>
+        {% endif %}
+        <div class="hero-cta">Read the piece <span class="hero-arrow">→</span></div>
       </div>
     {% endif %}
   </a>
@@ -80,7 +85,6 @@ permalink: /
       </li>
     {% endif %}
   </ul>
-
 
 </section>
 
