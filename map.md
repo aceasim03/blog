@@ -19,34 +19,11 @@ permalink: /map/
   </div>
 </div>
 
-<div class="map-list-intro">
-  Recent fragments on the map
-</div>
+<div class="map-list-intro">Recent fragments on the map</div>
 
-<ul class="map-list">
-  {% for post in site.posts limit: 8 %}
-    {% if post.lat and post.lng %}
-      <li class="map-list-item">
-        <div class="map-list-meta">
-          <span class="map-list-date">
-            {{ post.date | date: "%B %d, %Y" }}
-          </span>
-          {% if post.where %}
-            <span class="map-list-where"> · {{ post.where }}</span>
-          {% endif %}
-        </div>
-        <a class="map-list-title" href="{{ post.url | relative_url }}">
-          {{ post.title }}
-        </a>
-      </li>
-    {% endif %}
-  {% endfor %}
-</ul>
+<ul class="map-list"></ul>
 
-<link
-  rel="stylesheet"
-  href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
-/>
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
 
 <script>
@@ -65,31 +42,27 @@ permalink: /map/
     {% endfor %}
   ];
 
-  // Group by place name and keep the most recent post per place
+  // Keep most recent post per place
   const latestByPlaceMap = new Map();
-
   posts.forEach(p => {
     const key = p.where || "Somewhere";
     const existing = latestByPlaceMap.get(key);
-    if (!existing) {
+    if (!existing || p.date > existing.date) {
       latestByPlaceMap.set(key, p);
-    } else {
-      // compare ISO dates as strings
-      if (p.date > existing.date) {
-        latestByPlaceMap.set(key, p);
-      }
     }
   });
-
   const latestByPlace = Array.from(latestByPlaceMap.values());
 
+  // Map init
   const map = L.map("post-map", {
     zoomControl: false,
     scrollWheelZoom: false,
     dragging: true,
     doubleClickZoom: false,
-    attributionControl: false
+    attributionControl: true
   }).setView([25, 10], 2);
+
+  L.control.zoom({ position: "topright" }).addTo(map);
 
   L.tileLayer(
     "https://{s}.basemaps.cartocdn.com/light_nolabels/{z}/{x}/{y}{r}.png",
@@ -104,16 +77,11 @@ permalink: /map/
   const bounds = [];
   latestByPlace.forEach(p => {
     const m = L.marker([p.lat, p.lng], { icon: dotIcon }).addTo(map);
-
-    m.on("click", () => {
-      window.location.href = p.url;
-    });
-
+    m.on("click", () => { window.location.href = p.url; });
     m.bindTooltip(
       `${p.where}: ${p.title}`,
       { direction: "top", offset: [0, -8], opacity: 0.9 }
     );
-
     bounds.push([p.lat, p.lng]);
   });
 
@@ -121,29 +89,36 @@ permalink: /map/
     map.fitBounds(bounds, { padding: [30, 30] });
   }
 
-  // Build the “Recent fragments on the map” list from latestByPlace
-  document.addEventListener("DOMContentLoaded", () => {
-    const listEl = document.querySelector(".map-list");
-    if (!listEl) return;
+  // Format ISO date → "March 4, 2025"
+  const fmt = iso => {
+    const d = new Date(iso + "T00:00:00");
+    return d.toLocaleDateString("en-US", { month: "long", day: "numeric", year: "numeric" });
+  };
 
-    // Sort by date descending
+  // Build list
+  const listEl = document.querySelector(".map-list");
+  if (listEl) {
     const sorted = [...latestByPlace].sort((a, b) => (a.date < b.date ? 1 : -1));
-
     listEl.innerHTML = "";
     sorted.forEach(p => {
       const li = document.createElement("li");
       li.className = "map-list-item";
+      li.dataset.lat = p.lat;
+      li.dataset.lng = p.lng;
+      li.style.cursor = "pointer";
+      li.addEventListener("click", (e) => {
+        if (e.target.tagName !== "A") {
+          map.flyTo([p.lat, p.lng], 5, { duration: 1 });
+        }
+      });
       li.innerHTML = `
         <div class="map-list-meta">
-          <span class="map-list-date">${p.date}</span>
+          <span class="map-list-date">${fmt(p.date)}</span>
           <span class="map-list-where"> · ${p.where}</span>
         </div>
-        <a class="map-list-title" href="${p.url}">
-          ${p.title}
-        </a>
+        <a class="map-list-title" href="${p.url}">${p.title}</a>
       `;
       listEl.appendChild(li);
     });
-  });
+  }
 </script>
-
